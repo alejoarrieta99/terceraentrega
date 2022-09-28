@@ -1,0 +1,54 @@
+.hea{
+    background-image: radial-gradient(circle at 0% 0%, #ffffff 0, #a54910 25%, #0099ff 50%, #6ff600 75%, #fc040c 100%);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    grid-area: hea;
+
+    .logo img{
+        width: 80px;
+    }
+
+    .logo :hover{
+        transform: rotate(-15deg)
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: $secundaryColor;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .navbar{
+        .menu {
+            display: flex;
+            list-style-type: none;
+            gap: 30px;
+            align-items: center;
+            height: 100%;
+            margin-right: 40px;
+            
+            
+            .items
+                { a{
+                  color: $secundaryColor;
+                   text-decoration: none;}
+            
+    
+                  a:hover{
+                     text-decoration: underline;
+                   }
+                }}
+
+      .menu :hover {
+          transform: scale(1.5,1.5);
+           }
+          
+    }
+
+}

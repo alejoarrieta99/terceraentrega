@@ -1,0 +1,116 @@
+@mixin medias($breakpoint){
+    @if $breakpoint == mobile{
+        @media (min-width:480px){
+                .grid-contenedor{
+                height: 100vh;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(4, auto) ;
+                grid-template-areas: 
+                    "hea"
+                    "mai"
+                    "asi"
+                    "piee";
+            }
+        
+            .tx-lg{
+                font-size: 90%;
+            }
+        
+            .menu{
+               font-size: 90%;
+            }
+        
+            .hea{
+                flex-direction: column;
+            }
+        
+            .pedidowsp{
+                height: 10vh;
+            }
+        
+        
+            .tituu{
+                width: 90%;
+            }
+        
+            .vid {
+                overflow:hidden;
+                padding-bottom:10px;
+                height:0%;
+                width:100%;
+                position:relative;
+            }
+        
+            .asi{
+                height: 100px;
+                background-color: #ef0006;
+                text-align: center;
+            }
+        }
+        }
+    }
+    @if $breakpoint == tablet{
+        @media (min-width:600px){
+            @content;
+            .asi{
+                display: none;
+            }
+        
+            .tx-lg{
+                font-size: 0%;
+            }
+        }
+    }
+//    @if $breakpoint == desktop{
+//        @media (min-width:1200px){
+//            @content;
+//        }
+//    }
+
+
+main{
+    @include medias(mobile){
+        background-color: map-get($map:$paleta, $key:"dos");
+    }
+}
+
+
+//**==**==**==**==**==**
+
+
+.grid-contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 40vh;
+    grid-template-rows: 15vh 200vh 8vh ;
+    grid-template-areas: 
+        "hea hea hea"
+        "mai mai asi"
+        "piee piee piee";
+}
+
+.grid-contenedor2{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30vh auto 40vh;
+    grid-template-rows: 15vh 200vh 8vh ;
+    grid-template-areas: 
+        "hea hea hea"
+        "fil mai asi"
+        "piee piee piee";
+}
+
+.fil{
+    grid-area: fil;
+}
+
+.asi{
+    background-color: aquamarine;
+    margin: 5px;
+    grid-area: asi;
+}
+
+.mai{
+    grid-area: mai;
+}

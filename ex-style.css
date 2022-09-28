@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.logo img{
+    width: 80px;
+}
+
+header{
+    background-image: radial-gradient(circle at 0% 0%, #ff7809 0, #ff6504 25%, #ff4c00 50%, #f62c00 75%, #ef0006 100%);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    grid-area: hea;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+    margin-right: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.items a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.items a:hover{
+    animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/*contenido*/
+
+.portada {
+    margin: 20px;
+    width: 95%;
+}
+
+.bot-ini {
+    background-color: rgb(255, 136, 0);
+    color: aliceblue;
+    column-width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.botones-inicio {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.novedades{
+    background-color: rgb(133, 97, 55);
+    color: aliceblue;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.video{
+    margin: 30px;
+}
+
+.tituu{
+    background-color: rgb(255, 136, 0);
+    color: aliceblue;
+    padding: 5px;
+    width: 35%;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.footer {
+    margin: 10px;
+}
+
+/* promos imagenes */
+
+.promos img{
+    border-radius: 30px;
+    margin: 40px;
+    border-style: dashed;
+}
+
+/*quienes somos*/
+
+.info{
+    margin: 30px;
+}
+
+.redes {
+    display: flex;
+    justify-content:flex-end;
+    background-color: rgb(182, 182, 182);
+    text-align: end;
+    border-style: outset;
+}
+
+.textqs{
+    margin: 40px;
+}
+
+.redessoci{
+    display: flex;
+    gap: 90px;
+    margin-bottom: 10px;
+}
+
+.nr{
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.redes a{
+    margin: 20px;
+}
+
+.contac{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.con-rs{
+    margin: 25px;
+}
+
+/*haz tu pedido*/
+
+.pedidowsp{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*pie*/
+
+.piee{
+    background-color: rgb(255, 136, 0);
+    color: aliceblue;
+    position:relative;
+    display: center;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    align-items: flex-end;
+    text-align: center;
+    grid-area: piee;
+    clear: both;
+}
+
+.asi{
+    min-height: 100vh
+  }
+
+.box{
+    margin: 10px auto;
+    width: 300px;
+    height: 60px;
+  }
+
+/*=====Productos========*/
+
+.prod-block {
+    background-color: rgba(105, 105, 105, 0.26);
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.623);
+}
+
+.productos :hover {
+    transform: scale(1.1,1.1);
+}
+
+.prod-img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.productos {
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*====Animations====*/
+
+.logo :hover{
+    transform: rotate(-15deg)
+}
+
+.menu :hover {
+    transform: scale(1.5,1.5);
+}
+
+.botones-inicio :hover{
+    transform: scale(2,2);
+}
+
+/*GRIDS*/
+
+.grid-contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 40vh;
+    grid-template-rows: 15vh 200vh 8vh ;
+    grid-template-areas: 
+        "hea hea hea"
+        "mai mai asi"
+        "piee piee piee";
+}
+
+.body{
+    margin: 0; /*quiero que el footer no me quede flotando (como por ej, en productos), como hago?*/
+}
+
+.grid-contenedor2{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 30vh auto 40vh;
+    grid-template-rows: 15vh 200vh 8vh ;
+    grid-template-areas: 
+        "hea hea hea"
+        "fil mai asi"
+        "piee piee piee";
+}
+
+.fil{
+    grid-area: fil;
+}
+
+.asi{
+    background-color: aquamarine;
+    margin: 5px;
+    grid-area: asi;
+}
+
+.mai{
+    grid-area: mai;
+}
+
+/*media para tablet*/
+@media screen and (max-width: 768px){
+    .asi{
+        display: none;
+    }
+
+    .tx-lg{
+        font-size: 0%;
+    }
+}
+
+/*media para mobile*/
+@media screen and (max-width: 320px) {
+    .grid-contenedor{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto) ;
+        grid-template-areas: 
+            "hea"
+            "mai"
+            "asi"
+            "piee";
+    }
+
+    .tx-lg{
+        font-size: 90%;
+    }
+
+    .menu{
+       font-size: 90%;
+    }
+
+    .hea{
+        flex-direction: column;
+    }
+
+    .pedidowsp{
+        height: 10vh;
+    }
+
+
+    .tituu{
+        width: 90%;
+    }
+
+    .vid {
+        overflow:hidden;
+        padding-bottom:10px;
+        height:0%;
+        width:100%;
+        position:relative;
+    }
+
+    /*hagamos de cuenta que tengo ads*/
+    .asi{
+        height: 100px;
+        background-color: #ef0006;
+        text-align: center;
+    }
+}

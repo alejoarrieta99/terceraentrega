@@ -1,0 +1,70 @@
+.mai{
+    .portada {
+        margin: 20px;
+        width: 95%;
+    }
+
+    .botones-inicio {
+        display: flex;
+        justify-content: space-evenly;
+
+        .bot-ini {
+            background-color: $mainColor;
+            color: $secundaryColor;
+            column-width: 200px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    }
+
+    .botones-inicio :hover{
+        transform: scale(2,2);
+    }
+
+
+    .novedades{
+        background-color: $mainColor;
+        color: $secundaryColor;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .video{
+        margin: 30px;
+    }
+    
+    .tituu{
+        background-color: $mainColor;
+        color: $secundaryColor;
+        padding: 5px;
+        width: 35%;
+        text-align: center;
+        border-radius: 25px;
+    }
+}
+
+    .asi{
+        min-height: 100vh
+      }
+    
+    .box{
+        margin: 10px auto;
+        width: 300px;
+        height: 60px;
+      }
+    
+  .pedidowsp{
+      position: fixed;
+       bottom: 10px;
+        right: 10px;
+    }
+
+
+
+
+
+
+
+
